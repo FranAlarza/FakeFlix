@@ -37,10 +37,11 @@ extension MovieRequest: APIRequest {
                 URLQueryItem(name: "language", value: "en-US"),
                 URLQueryItem(name: "page", value: "1")
             ]
-        case .movie:
+        case .movie(let id):
             return [
                 URLQueryItem(name: "api_key", value: Constants.API_KEY),
-                URLQueryItem(name: "language", value: "en-US")
+                URLQueryItem(name: "language", value: "en-US"),
+                URLQueryItem(name: "query", value: id)
             ]
         }
     }

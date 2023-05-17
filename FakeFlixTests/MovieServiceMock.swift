@@ -9,6 +9,10 @@ import Foundation
 @testable import FakeFlix
 
 final class MovieServiceMock: MovieServiceProtocol {
+    func searchMovies(request: FakeFlix.MovieRequest) async throws -> FakeFlix.PopularMovies {
+        //
+    }
+    
     func getPopularMovies(request: MovieRequest) async throws -> PopularMovies {
         
         return PopularMovies(page: 1, results: [Movie(adult: true, id: 1, originalLanguage: "", originalTitle: "", overview: "", popularity: 5.0, posterPath: "", releaseDate: "", title: "", voteAverage: 9.0)], totalPages: 1, totalResults: 10)

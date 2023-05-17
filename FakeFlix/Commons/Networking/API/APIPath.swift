@@ -16,7 +16,7 @@ enum APIPath {
         switch self {
         case .popularMovies: return "/3/movie/popular"
         case .topRatedMovies: return "/3/movie/top_rated"
-        case let .movies(id): return "/3/movie/\(id)"
+        case .movies: return "/3/search/movie"
         }
     }
 }

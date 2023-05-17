@@ -13,6 +13,9 @@ final class HomeViewModel: ObservableObject {
     @Published var topRatedMovies: PopularMovies?
     @Published var isErrorPopular: Bool = false
     @Published var isErrorTopRates: Bool = false
+    @Published var searchedMovies: PopularMovies?
+    @Published var query = ""
+    
     private var service: MovieServiceProtocol
     private var repository: Repository
     
@@ -61,6 +64,18 @@ final class HomeViewModel: ObservableObject {
         } catch {
             isErrorTopRates = true
             print("Tenemos un problema")
+        }
+    }
+    
+    func searchMoviesByName() async {
+        
+        do {
+            let searchMoviesResponse = try await service.searchMovies(request: .movie(id: query))
+            DispatchQueue.main.async { [weak self] in
+                self?.searchedMovies = searchMoviesResponse
+            }
+        } catch {
+            print("Hay coincidencias")
         }
     }
 }

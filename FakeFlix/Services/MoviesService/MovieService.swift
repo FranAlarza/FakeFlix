@@ -10,6 +10,7 @@ import Foundation
 protocol MovieServiceProtocol {
     func getPopularMovies(request: MovieRequest) async throws -> PopularMovies
     func getTopRatedMovies(request: MovieRequest) async throws -> PopularMovies
+    func searchMovies(request: MovieRequest) async throws -> PopularMovies
 }
 
 class MovieService: MovieServiceProtocol {
@@ -24,6 +25,10 @@ class MovieService: MovieServiceProtocol {
     }
     
     func getTopRatedMovies(request: MovieRequest) async throws -> PopularMovies {
+        try await networRequester.doRequest(request: request)
+    }
+    
+    func searchMovies(request: MovieRequest) async throws -> PopularMovies {
         try await networRequester.doRequest(request: request)
     }
     

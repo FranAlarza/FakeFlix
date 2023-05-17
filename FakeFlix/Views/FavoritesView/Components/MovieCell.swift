@@ -13,7 +13,7 @@ struct MovieCell: View {
         HStack(spacing: 8) {
             AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "")")) { image in
                 NavigationLink {
-                    DetailView(image: image, movie: movie)
+                    DetailView(movie: movie)
                 } label: {
                     image
                         .resizable()

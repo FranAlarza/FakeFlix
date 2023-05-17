@@ -10,15 +10,11 @@ import SwiftUI
 struct DetailView: View {
     @ObservedObject var viewModel = DetailViewModel()
     @State var isFavorite = false
-    var image: Image
     var movie: Movie
     var body: some View {
         VStack {
             ZStack {
-                image
-                    .resizable()
-                    .ignoresSafeArea(.container)
-
+                AsyncImageView(posterPath: movie.posterPath ?? "", movie: movie, type: .detail)
                 ZStack {
                     LinearGradient(gradient: Gradient(colors: [.black, .white]), startPoint: .top, endPoint: .bottom)
                                     .edgesIgnoringSafeArea(.all)
@@ -59,11 +55,11 @@ struct DetailView: View {
                                 .foregroundColor(.black)
                         }
                     }
+                    .padding()
                     .onAppear {
                         viewModel.loadFavorites()
                         isFavorite = viewModel.checkIfIsFavorite(movie: movie)
                     }
-                    .padding()
                 }
             }
         }
@@ -72,6 +68,6 @@ struct DetailView: View {
 
 struct DetailView_Previews: PreviewProvider {
     static var previews: some View {
-        DetailView(image: Image(systemName: "house"), movie: Movie(adult: true, id: 1, originalLanguage: "", originalTitle: "", overview: "", popularity: 10.0, posterPath: "", releaseDate: "", title: "", voteAverage: 9.0))
+        DetailView(movie: Movie(adult: true, id: 1, originalLanguage: "", originalTitle: "", overview: "", popularity: 10.0, posterPath: "", releaseDate: "", title: "", voteAverage: 9.0))
     }
 }

@@ -26,7 +26,7 @@ struct ScrollMovies: View {
                         ForEach(movies) { movie in
                             AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "")")) { image in
                                 NavigationLink {
-                                    DetailView(image: image, movie: movie)
+                                    DetailView(movie: movie)
                                 } label: {
                                     image
                                         .resizable()

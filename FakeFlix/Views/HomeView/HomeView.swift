@@ -10,6 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @ObservedObject var viewModel = HomeViewModel()
     
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -21,6 +22,23 @@ struct HomeView: View {
                     ScrollMovies(movies: viewModel.topRatedMovies?.results ?? [], title: "Top Rated Movies", isError: $viewModel.isErrorTopRates)
                     Spacer()
                 }
+                .searchable(text: $viewModel.query) {
+                    ForEach(viewModel.searchedMovies?.results ?? []) { sugestion in
+                        NavigationLink {
+                            DetailView(movie: sugestion)
+                        } label: {
+                            HStack(spacing: 16) {
+                                AsyncImageView(posterPath: sugestion.posterPath ?? "", movie: sugestion, type: .custom)
+                                Text(sugestion.originalTitle ?? "")
+                            }
+                        }
+                    }
+                }
+                .onChange(of: viewModel.query, perform: { _ in
+                    Task {
+                        await viewModel.searchMoviesByName()
+                    }
+                })
                 .padding()
                 .onAppear {
                     Task {
