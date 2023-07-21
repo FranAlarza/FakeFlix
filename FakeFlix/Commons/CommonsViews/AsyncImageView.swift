@@ -21,9 +21,6 @@ struct AsyncImageView: View {
 
     var body: some View {
         AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500/\(posterPath)")) { image in
-            NavigationLink {
-                DetailView(movie: movie)
-            } label: {
                 switch type {
                 case .custom:
                     image
@@ -33,13 +30,23 @@ struct AsyncImageView: View {
                 case .detail:
                     image
                         .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.all)
+                        .frame(width: 250)
+                        .frame(maxHeight: .infinity)
+                        .border(Color.white, width: 2)
+                        .aspectRatio(contentMode: .fit)
                 }
-                
-            }
         } placeholder: {
-            ProgressView()
+            switch type {
+            case .custom:
+                Image("example_image")
+                    .resizable()
+                    .frame(width: 50, height: 50)
+            case .detail:
+                Image("example_image")
+                    .resizable()
+                    .frame(width: 250)
+                    .frame(maxHeight: .infinity)
+            }
         }
     }
 }
