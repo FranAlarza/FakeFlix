@@ -10,19 +10,17 @@ import SwiftUI
 struct ScrollMovies: View {
     var movies: [Movie] = []
     var title = ""
+    let columns: [GridItem] = Array(repeating: .init(.flexible()), count: 3)
     @Binding var isError: Bool
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(title)
-                .font(.title2)
-                .bold()
-            ScrollView(.horizontal) {
+            ScrollView(.vertical) {
                 if isError {
                     VStack {
                         Text("We can't load the movies")
                     }
                 } else {
-                    HStack {
+                    LazyVGrid(columns: columns) {
                         ForEach(movies) { movie in
                             AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "")")) { image in
                                 NavigationLink {
@@ -30,11 +28,20 @@ struct ScrollMovies: View {
                                 } label: {
                                     image
                                         .resizable()
-                                        .frame(width: 200, height: 250)
+                                        .frame(minWidth: 60)
+                                        .frame(height: 170)
                                         .cornerRadius(8)
+                                        .padding(8)
                                 }
                             } placeholder: {
-                                ProgressView()
+                                ZStack {
+                                    Rectangle()
+                                        .frame(minWidth: 60)
+                                        .frame(height: 170)
+                                        .cornerRadius(8)
+                                        .padding(8)
+                                    Text("Can`t load the poster")
+                                }
                             }
                             
                         }

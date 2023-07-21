@@ -13,13 +13,16 @@ struct ContentView: View {
             HomeView()
                 .tabItem {
                     Image(systemName: "house")
+                        .foregroundColor(.white)
                     Text("Home")
+                        .foregroundColor(.white)
                 }
             FavoritesView()
                 .tabItem {
                     Image(systemName: "heart")
                         .foregroundColor(.white)
                     Text("Favorites")
+                        .foregroundColor(.white)
                 }
         }
     }

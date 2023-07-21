@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum ConstantKeys: String {
+    case apikey
+}
+
 struct Constants {
-    static let API_KEY = "100c5ac8b69942aa2b4db4ac08283f68"
+    static let API_KEY: String = InfoManager.shared.get(for: ConstantKeys.apikey.rawValue, in: .apiConfig) ?? ""
 }

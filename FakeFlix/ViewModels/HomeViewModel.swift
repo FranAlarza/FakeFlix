@@ -14,6 +14,7 @@ final class HomeViewModel: ObservableObject {
     @Published var isErrorPopular: Bool = false
     @Published var isErrorTopRates: Bool = false
     @Published var searchedMovies: PopularMovies?
+    @Published var currententCollectionMovie: CollectionMovieType = .topMovies
     @Published var query = ""
     
     private var service: MovieServiceProtocol

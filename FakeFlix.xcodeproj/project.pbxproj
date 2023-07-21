@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9815F9ED2A697507007D1365 /* CustomLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F9EC2A697507007D1365 /* CustomLogo.swift */; };
+		9815F9EF2A697537007D1365 /* CustomLetter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F9EE2A697537007D1365 /* CustomLetter.swift */; };
+		9815F9F12A6977B1007D1365 /* SplashScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9815F9F02A6977B1007D1365 /* SplashScreen.swift */; };
+		983041BD2A698319002C2D27 /* intro.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 983041BC2A698319002C2D27 /* intro.mp3 */; };
+		983041BF2A698714002C2D27 /* TypeSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983041BE2A698714002C2D27 /* TypeSelectorView.swift */; };
+		983041C22A698968002C2D27 /* ButtonSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983041C12A698968002C2D27 /* ButtonSelector.swift */; };
+		986A16452A688AF2008F4C15 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986A16442A688AF2008F4C15 /* Colors.swift */; };
+		986A16472A688CC0008F4C15 /* FeatureBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 986A16462A688CC0008F4C15 /* FeatureBox.swift */; };
+		988122B62A69628200CC9750 /* InfoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988122B52A69628200CC9750 /* InfoManager.swift */; };
 		9D4ED40D2A1296E50046BAFA /* FakeFlixApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4ED40C2A1296E50046BAFA /* FakeFlixApp.swift */; };
 		9D4ED40F2A1296E50046BAFA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4ED40E2A1296E50046BAFA /* ContentView.swift */; };
 		9D4ED4112A1296E70046BAFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D4ED4102A1296E70046BAFA /* Assets.xcassets */; };
@@ -53,6 +62,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9815F9EC2A697507007D1365 /* CustomLogo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLogo.swift; sourceTree = "<group>"; };
+		9815F9EE2A697537007D1365 /* CustomLetter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLetter.swift; sourceTree = "<group>"; };
+		9815F9F02A6977B1007D1365 /* SplashScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreen.swift; sourceTree = "<group>"; };
+		983041BC2A698319002C2D27 /* intro.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = intro.mp3; sourceTree = "<group>"; };
+		983041BE2A698714002C2D27 /* TypeSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeSelectorView.swift; sourceTree = "<group>"; };
+		983041C12A698968002C2D27 /* ButtonSelector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonSelector.swift; sourceTree = "<group>"; };
+		986A16442A688AF2008F4C15 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		986A16462A688CC0008F4C15 /* FeatureBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureBox.swift; sourceTree = "<group>"; };
+		988122B22A695D0C00CC9750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		988122B52A69628200CC9750 /* InfoManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoManager.swift; sourceTree = "<group>"; };
 		9D4ED4092A1296E50046BAFA /* FakeFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D4ED40C2A1296E50046BAFA /* FakeFlixApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeFlixApp.swift; sourceTree = "<group>"; };
 		9D4ED40E2A1296E50046BAFA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -108,6 +127,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		983041BB2A698302002C2D27 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				983041BC2A698319002C2D27 /* intro.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		983041C02A698948002C2D27 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				983041C12A698968002C2D27 /* ButtonSelector.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		986A16422A688AC5008F4C15 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				983041BB2A698302002C2D27 /* Sounds */,
+				986A16432A688AD8008F4C15 /* Colors */,
+				9D4ED4102A1296E70046BAFA /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		986A16432A688AD8008F4C15 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				986A16442A688AF2008F4C15 /* Colors.swift */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		988122B42A69627100CC9750 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				988122B52A69628200CC9750 /* InfoManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		9D4ED4002A1296E50046BAFA = {
 			isa = PBXGroup;
 			children = (
@@ -129,16 +190,17 @@
 		9D4ED40B2A1296E50046BAFA /* FakeFlix */ = {
 			isa = PBXGroup;
 			children = (
+				988122B22A695D0C00CC9750 /* Info.plist */,
 				9DF31F422A13F71C00B37AD0 /* Data */,
 				9D4ED40C2A1296E50046BAFA /* FakeFlixApp.swift */,
 				9D4ED40E2A1296E50046BAFA /* ContentView.swift */,
 				9D4ED4582A12B15E0046BAFA /* Services */,
 				9D4ED4542A12B0E10046BAFA /* Commons */,
-				9D4ED4382A129FCE0046BAFA /* Models */,
 				9D4ED4362A129FB30046BAFA /* Views */,
 				9D4ED4372A129FC30046BAFA /* ViewModels */,
-				9D4ED4102A1296E70046BAFA /* Assets.xcassets */,
+				986A16422A688AC5008F4C15 /* Assets */,
 				9D4ED4122A1296E70046BAFA /* Preview Content */,
+				9815F9F02A6977B1007D1365 /* SplashScreen.swift */,
 			);
 			path = FakeFlix;
 			sourceTree = "<group>";
@@ -181,13 +243,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		9D4ED4382A129FCE0046BAFA /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		9D4ED4392A129FDE0046BAFA /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +276,8 @@
 		9D4ED4542A12B0E10046BAFA /* Commons */ = {
 			isa = PBXGroup;
 			children = (
+				983041C02A698948002C2D27 /* Styles */,
+				988122B42A69627100CC9750 /* Managers */,
 				9D4FBC342A14C7CB003A5B5A /* CommonsViews */,
 				9DF31F3F2A13F19900B37AD0 /* Extensions */,
 				9D4ED4552A12B10A0046BAFA /* Constants */,
@@ -268,6 +325,7 @@
 			isa = PBXGroup;
 			children = (
 				9D4ED45F2A12B6800046BAFA /* ScrollMovies.swift */,
+				983041BE2A698714002C2D27 /* TypeSelectorView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -293,6 +351,8 @@
 			isa = PBXGroup;
 			children = (
 				9D4FBC352A14C7F2003A5B5A /* AsyncImageView.swift */,
+				9815F9EC2A697507007D1365 /* CustomLogo.swift */,
+				9815F9EE2A697537007D1365 /* CustomLetter.swift */,
 			);
 			path = CommonsViews;
 			sourceTree = "<group>";
@@ -310,6 +370,7 @@
 			isa = PBXGroup;
 			children = (
 				9DF31F3D2A13E44000B37AD0 /* DetailView.swift */,
+				986A16462A688CC0008F4C15 /* FeatureBox.swift */,
 			);
 			path = DetailView;
 			sourceTree = "<group>";
@@ -431,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D4ED4142A1296E70046BAFA /* Preview Assets.xcassets in Resources */,
+				983041BD2A698319002C2D27 /* intro.mp3 in Resources */,
 				9D4ED4112A1296E70046BAFA /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -459,6 +521,9 @@
 				9D4ED4662A12BFBD0046BAFA /* PopularMoviesModel.swift in Sources */,
 				9DF31F4D2A1406D600B37AD0 /* DetailViewModel.swift in Sources */,
 				9DF31F412A13F1B600B37AD0 /* Double+Extensions.swift in Sources */,
+				9815F9EF2A697537007D1365 /* CustomLetter.swift in Sources */,
+				986A16452A688AF2008F4C15 /* Colors.swift in Sources */,
+				988122B62A69628200CC9750 /* InfoManager.swift in Sources */,
 				9D4ED40F2A1296E50046BAFA /* ContentView.swift in Sources */,
 				9D4ED4532A12B06A0046BAFA /* HomeViewModel.swift in Sources */,
 				9D4ED4432A12A3CF0046BAFA /* ServiccesURL.swift in Sources */,
@@ -470,8 +535,13 @@
 				9D4ED4622A12BAF80046BAFA /* MovieRequest.swift in Sources */,
 				9DF31F482A13FE5A00B37AD0 /* FavoritesViewModel.swift in Sources */,
 				9D4ED40D2A1296E50046BAFA /* FakeFlixApp.swift in Sources */,
+				9815F9F12A6977B1007D1365 /* SplashScreen.swift in Sources */,
+				983041BF2A698714002C2D27 /* TypeSelectorView.swift in Sources */,
 				9DF31F442A13F73100B37AD0 /* AppRepository.swift in Sources */,
 				9D4ED4492A12A9380046BAFA /* APIError.swift in Sources */,
+				9815F9ED2A697507007D1365 /* CustomLogo.swift in Sources */,
+				986A16472A688CC0008F4C15 /* FeatureBox.swift in Sources */,
+				983041C22A698968002C2D27 /* ButtonSelector.swift in Sources */,
 				9DF31F462A13F8DB00B37AD0 /* StorageKeys.swift in Sources */,
 				9DF31F4B2A14018900B37AD0 /* MovieCell.swift in Sources */,
 				9D4ED4602A12B6800046BAFA /* ScrollMovies.swift in Sources */,
@@ -626,6 +696,7 @@
 				DEVELOPMENT_TEAM = K9H6BXS78G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FakeFlix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -655,6 +726,7 @@
 				DEVELOPMENT_TEAM = K9H6BXS78G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FakeFlix/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

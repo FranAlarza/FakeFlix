@@ -12,16 +12,14 @@ struct MovieCell: View {
     var body: some View {
         HStack(spacing: 8) {
             AsyncImage(url: URL(string: "https://image.tmdb.org/t/p/w500/\(movie.posterPath ?? "")")) { image in
-                NavigationLink {
-                    DetailView(movie: movie)
-                } label: {
-                    image
-                        .resizable()
-                        .frame(width: 150, height: 100)
-                        .cornerRadius(8)
-                }
+                image
+                    .resizable()
+                    .frame(width: 120, height: 100)
+                    .cornerRadius(8)
             } placeholder: {
-                ProgressView()
+                Image("example_image")
+                    .resizable()
+                    .frame(width: 120, height: 100)
             }
             VStack(alignment: .leading, spacing: 8) {
                 Text(movie.originalTitle ?? "")
@@ -31,6 +29,7 @@ struct MovieCell: View {
                     .font(.caption)
             }
         }
+        
     }
 }
 
